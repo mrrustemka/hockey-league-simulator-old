@@ -2,8 +2,8 @@ import { useState } from "react";
 import teamsArr from "../data/teams";
 
 function GameForm({ addGame }) {
-  const [textHome, setTextHome] = useState("");
-  const [textAway, setTextAway] = useState("");
+  const [homeTeam, setHomeTeam] = useState("");
+  const [awayTeam, setAwayTeam] = useState("");
 
   const onSubmitHandler = (event) => {
     event.preventDefault();
@@ -11,18 +11,17 @@ function GameForm({ addGame }) {
     let awayGoals = 0;
     let typeOfOt = "";
 
-    // console.log(text);
-    Game(textHome, textAway);
+    Game(homeTeam, awayTeam);
 
-    function Game(textHome, textAway) {
+    function Game(homeTeam, awayTeam) {
       let homeRate;
       let awayRate;
 
       homeRate = teamsArr.find(
-        (element) => element.abbreviation === textHome
+        (element) => element.abbreviation === homeTeam
       )?.rating;
       awayRate = teamsArr.find(
-        (element) => element.abbreviation === textAway
+        (element) => element.abbreviation === awayTeam
       )?.rating;
 
       //Goals
@@ -40,13 +39,13 @@ function GameForm({ addGame }) {
         if (otGoal > 0.5) {
           homeGoals += 1;
           let winner = teamsArr.find(
-            (element) => element.abbreviation === textAway
+            (element) => element.abbreviation === awayTeam
           );
           winner.points += 1;
         } else {
           awayGoals += 1;
           let winner = teamsArr.find(
-            (element) => element.abbreviation === textHome
+            (element) => element.abbreviation === homeTeam
           );
           winner.points += 1;
         }
@@ -63,12 +62,12 @@ function GameForm({ addGame }) {
 
       if (homeGoals > awayGoals) {
         let winner = teamsArr.find(
-          (element) => element.abbreviation === textHome
+          (element) => element.abbreviation === homeTeam
         );
         winner.points += 2;
       } else {
         let winner = teamsArr.find(
-          (element) => element.abbreviation === textAway
+          (element) => element.abbreviation === awayTeam
         );
         winner.points += 2;
       }
@@ -76,40 +75,48 @@ function GameForm({ addGame }) {
       // Goals Stats
 
       let homeGoalStat = teamsArr.find(
-        (element) => element.abbreviation === textHome
+        (element) => element.abbreviation === homeTeam
       );
       homeGoalStat.goals_for += homeGoals;
       homeGoalStat.goals_against += awayGoals;
       homeGoalStat.game_counter += 1;
 
       let awayGoalStat = teamsArr.find(
-        (element) => element.abbreviation === textAway
+        (element) => element.abbreviation === awayTeam
       );
       awayGoalStat.goals_for += awayGoals;
       awayGoalStat.goals_against += homeGoals;
       awayGoalStat.game_counter += 1;
     }
-    addGame(textHome, textAway, homeGoals, awayGoals, typeOfOt);
-    setTextHome("");
-    setTextAway("");
+    addGame(homeTeam, awayTeam, homeGoals, awayGoals, typeOfOt);
+    setHomeTeam("");
+    setAwayTeam("");
   };
 
   return (
-    <div>
+    <div className="text-center mt-4">
       <form onSubmit={onSubmitHandler}>
-        <input
-          placeholder="Enter Home Team"
-          type="text"
-          value={textHome}
-          onChange={(e) => setTextHome(e.target.value)}
-        ></input>
-        <input
-          placeholder="Enter Away Team"
-          type="text"
-          value={textAway}
-          onChange={(e) => setTextAway(e.target.value)}
-        ></input>
-        <button type="submit" title="Submit">
+        <div className="m-2">
+          Home Team:
+          <input
+            placeholder="Enter Home Team"
+            type="text"
+            value={homeTeam}
+            onChange={(e) => setHomeTeam(e.target.value)}
+            className="ms-2 me-2"
+          ></input>
+        </div>
+        <div className="m-2">
+          Away Team:
+          <input
+            placeholder="Enter Away Team"
+            type="text"
+            value={awayTeam}
+            onChange={(e) => setAwayTeam(e.target.value)}
+            className="ms-2 me-2"
+          ></input>
+        </div>
+        <button type="submit" title="Submit" className="btn btn-dark mt-4">
           Simulate
         </button>
       </form>

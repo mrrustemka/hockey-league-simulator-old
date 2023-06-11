@@ -11,15 +11,15 @@ function Ehl() {
   const [games, setGames] = useState([]);
 
   const addGameHandler = (
-    textHome,
-    textAway,
+    homeTeam,
+    awayTeam,
     homeGoals,
     awayGoals,
     typeOfOt
   ) => {
     const newGame = {
-      textHome,
-      textAway,
+      homeTeam,
+      awayTeam,
       homeGoals,
       awayGoals,
       typeOfOt,
@@ -29,7 +29,7 @@ function Ehl() {
   };
 
   return (
-    <div className="text-center mt-4">
+    <div className="mt-4">
       <GameForm addGame={addGameHandler} />
       <GameList games={games} />
     </div>

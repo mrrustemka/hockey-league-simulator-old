@@ -1,10 +1,7 @@
 import React from "react";
-import GameR from "./GameR";
+import GameR from "./LastGame";
 
 function GameList({ games }) {
-  // console.log("text1", games.homeGoals);
-  // console.log("text2", games.awayGoals);
-
   if (!games.length) {
     return (
       <div>
@@ -13,7 +10,7 @@ function GameList({ games }) {
     );
   }
   return (
-    <div>
+    <div className="row row-cols-3 row-cols-md-6 g-4 mt-4">
       {games.map((game) => (
         <GameR game={game} key={game.id} />
       ))}
