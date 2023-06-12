@@ -1,5 +1,5 @@
 import { useState } from "react";
-import teamsArr from "../data/teams";
+// import teamsArr from "../data/teams";
 import GameForm from "./GameForm";
 import React from "react";
 import GameList from "./GameList";

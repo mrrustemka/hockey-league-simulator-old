@@ -1,5 +1,7 @@
 import { useState } from "react";
 import teamsArr from "../data/teams";
+import Sheet from "./Sheet";
+import "../App.css";
 
 function GameForm({ addGame }) {
   const [homeTeam, setHomeTeam] = useState("");
@@ -95,6 +97,7 @@ function GameForm({ addGame }) {
 
   return (
     <div className="text-center mt-4">
+      <Sheet />
       <form onSubmit={onSubmitHandler}>
         <div className="m-2">
           Home Team:

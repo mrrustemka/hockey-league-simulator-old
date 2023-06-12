@@ -10,7 +10,7 @@ function GameList({ games }) {
     );
   }
   return (
-    <div className="row row-cols-3 row-cols-md-6 g-4 mt-4">
+    <div className="row row-cols-3 row-cols-md-6 g-4 m-2">
       {games.map((game) => (
         <GameR game={game} key={game.id} />
       ))}

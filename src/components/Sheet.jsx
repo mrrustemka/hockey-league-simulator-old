@@ -2,35 +2,27 @@ import { useState } from "react";
 import teams from "../data/teams";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-const App = () => {
+function Sheet() {
   const [data, setData] = useState(teams);
 
-  const updateState = () => {
-    let newState = teams.map((team) => {
-      return (
-        <div>
-          <table className="table table-hover table-bordered">
-            <thead className="">
-              <tr key={team.id}>
-                <th>{team.name}</th>
-                <th>{team.city}</th>
-                <th className="text-center">{team.points}</th>
-                <th className="text-center">{team.goals_for}</th>
-                <th className="text-center">{team.goals_against}</th>
-              </tr>
-            </thead>
-          </table>
-        </div>
-      );
-    });
-    // console.log(newState);
-    setData(newState);
-    handleSimulate();
-  };
-
-  function handleSimulate() {
-    setData({ ...data });
-  }
+  let newState = teams.map((team) => {
+    return (
+      <div>
+        <table className="table table-hover table-bordered">
+          <thead className="">
+            <tr key={team.id}>
+              <th>{team.name}</th>
+              <th>{team.city}</th>
+              <th className="text-center">{team.points}</th>
+              <th className="text-center">{team.goals_for}</th>
+              <th className="text-center">{team.goals_against}</th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+    );
+  });
+  setData(newState);
 
   return (
     <div className=" text-center">
@@ -58,11 +50,8 @@ const App = () => {
           );
         })}
       </table>
-      <button onClick={updateState} className="btn btn-dark">
-        Update Result
-      </button>
     </div>
   );
-};
+}
 
-export default App;
+export default Sheet;
