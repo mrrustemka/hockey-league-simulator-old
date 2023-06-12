@@ -1,13 +1,10 @@
 import { useState } from "react";
-// import teamsArr from "../data/teams";
 import GameForm from "./GameForm";
 import React from "react";
 import GameList from "./GameList";
 import { v4 as uuidv4 } from "uuid";
 
 function Ehl() {
-  // Sending Team to GameForm
-
   const [games, setGames] = useState([]);
 
   const addGameHandler = (

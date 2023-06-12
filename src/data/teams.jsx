@@ -14,6 +14,7 @@ export const teams = [
     stadiumCapacity: 5750,
     games: [],
     game_counter: 0,
+    logo: "lak",
   },
   {
     id: 2,
@@ -28,6 +29,7 @@ export const teams = [
     stadiumCapacity: 6001,
     games: [],
     game_counter: 0,
+    logo: "aik",
   },
   {
     id: 3,
@@ -42,6 +44,7 @@ export const teams = [
     stadiumCapacity: 5150,
     games: [],
     game_counter: 0,
+    logo: "ore",
   },
   {
     id: 4,
@@ -56,6 +59,7 @@ export const teams = [
     stadiumCapacity: 12044,
     games: [],
     game_counter: 0,
+    logo: "fro",
   },
 ];
 export default teams;

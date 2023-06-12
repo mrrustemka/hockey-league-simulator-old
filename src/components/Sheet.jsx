@@ -1,10 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import teams from "../data/teams";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function Sheet() {
   const [data, setData] = useState(teams);
-
   let newState = teams.map((team) => {
     return (
       <div>
@@ -22,7 +21,11 @@ function Sheet() {
       </div>
     );
   });
-  setData(newState);
+  // setData(newState);
+
+  useEffect(() => {
+    setData(newState);
+  }, []);
 
   return (
     <div className=" text-center">
