@@ -33,6 +33,14 @@ function GameForm({ addGame }) {
       function getRandomInt(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
       }
+      if (homeGoals - awayGoals >= 5 || awayGoals - homeGoals >= 5) {
+        let ran = Math.random();
+        if (ran > 0.5) {
+          return;
+        } else {
+          homeGoals = awayGoals;
+        }
+      }
 
       // OT or Shootout
 

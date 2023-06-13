@@ -1,4 +1,8 @@
 // import { ITeam } from "../components/info";
+import aik from "../images/aik.png";
+import fro from "../images/fro.png";
+import lak from "../images/lak.png";
+import ore from "../images/ore.png";
 
 export const teams = [
   {
@@ -14,7 +18,8 @@ export const teams = [
     stadiumCapacity: 5750,
     games: [],
     game_counter: 0,
-    logo: "lak",
+    logo: lak,
+    background_color: "lak",
   },
   {
     id: 2,
@@ -29,7 +34,8 @@ export const teams = [
     stadiumCapacity: 6001,
     games: [],
     game_counter: 0,
-    logo: "aik",
+    logo: aik,
+    background_color: "aik",
   },
   {
     id: 3,
@@ -44,7 +50,8 @@ export const teams = [
     stadiumCapacity: 5150,
     games: [],
     game_counter: 0,
-    logo: "ore",
+    logo: ore,
+    background_color: "ore",
   },
   {
     id: 4,
@@ -59,7 +66,8 @@ export const teams = [
     stadiumCapacity: 12044,
     games: [],
     game_counter: 0,
-    logo: "fro",
+    logo: fro,
+    background_color: "fro",
   },
 ];
 export default teams;

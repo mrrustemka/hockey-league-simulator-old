@@ -1,28 +1,41 @@
 import React from "react";
 import teamsArr from "../data/teams";
-// import aik from "../images/aik.png";
-// import fro from "../images/fro.png";
-// import lak from "../images/lak.png";
-// import ore from "../images/ore.png";
+import "../App.css";
 
 function GameR({ game }) {
-  let homeTeamLogo;
-  // let awayTeamLogo;
-
-  let home = teamsArr.find((element) => element.abbreviation === game.homeTeam);
-  home.logo = homeTeamLogo;
+  let homeTeamInfo = teamsArr.find(
+    (element) => element.abbreviation === game.homeTeam
+  );
+  let awayTeamInfo = teamsArr.find(
+    (element) => element.abbreviation === game.awayTeam
+  );
   return (
     <div className="col">
       <div className="card border-dark mb-1">
-        <div className="card-body row row-cols-2">
-          <img src={homeTeamLogo} class="card-img-top" alt="..."></img>
-          <div>
-            {game.homeTeam} {game.homeGoals}
+        <div className="card-body row row-cols-3">
+          <img
+            src={homeTeamInfo.logo}
+            className={`${homeTeamInfo.background_color} card-img-top g-col-3`}
+            alt={homeTeamInfo.name}
+          ></img>
+          <div className="text-center">
+            <h6>
+              {game.homeTeam} {game.homeGoals}
+            </h6>
           </div>
-          <div>
-            {game.awayTeam} {game.awayGoals}
+          <div className="text-center">
+            <h5>{game.typeOfOt}</h5>
           </div>
-          <div>{game.typeOfOt}</div>
+          <div className="text-center">
+            <h6>
+              {game.awayTeam} {game.awayGoals}
+            </h6>
+          </div>
+          <img
+            src={awayTeamInfo.logo}
+            className={`${awayTeamInfo.background_color} card-img-top g-col-3`}
+            alt={awayTeamInfo.name}
+          ></img>
         </div>
       </div>
     </div>

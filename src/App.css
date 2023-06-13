@@ -1,3 +1,19 @@
 .row .row-cols-3 .row-cols-md-6 .g-4 .mt-4 {
   max-width: 100%;
 }
+
+.aik {
+  background-color: #010101;
+}
+
+.fro {
+  background-color: #c90210;
+}
+
+.lak {
+  background-color: #f47734;
+}
+
+.ore {
+  background-color: #ffffff;
+}
