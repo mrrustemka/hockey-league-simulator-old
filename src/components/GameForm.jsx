@@ -20,10 +20,16 @@ function GameForm({ addGame }) {
       let awayRate;
 
       homeRate = teamsArr.find(
-        (element) => element.abbreviation === homeTeam
+        (element) =>
+          element.abbreviation === homeTeam ||
+          element.name === homeTeam ||
+          element.city === homeTeam
       )?.rating;
       awayRate = teamsArr.find(
-        (element) => element.abbreviation === awayTeam
+        (element) =>
+          element.abbreviation === awayTeam ||
+          element.name === awayTeam ||
+          element.city === awayTeam
       )?.rating;
 
       //Goals
@@ -49,13 +55,19 @@ function GameForm({ addGame }) {
         if (otGoal > 0.5) {
           homeGoals += 1;
           let winner = teamsArr.find(
-            (element) => element.abbreviation === awayTeam
+            (element) =>
+              element.abbreviation === awayTeam ||
+              element.name === awayTeam ||
+              element.city === awayTeam
           );
           winner.points += 1;
         } else {
           awayGoals += 1;
           let winner = teamsArr.find(
-            (element) => element.abbreviation === homeTeam
+            (element) =>
+              element.abbreviation === homeTeam ||
+              element.name === homeTeam ||
+              element.city === homeTeam
           );
           winner.points += 1;
         }
@@ -72,12 +84,18 @@ function GameForm({ addGame }) {
 
       if (homeGoals > awayGoals) {
         let winner = teamsArr.find(
-          (element) => element.abbreviation === homeTeam
+          (element) =>
+            element.abbreviation === homeTeam ||
+            element.name === homeTeam ||
+            element.city === homeTeam
         );
         winner.points += 2;
       } else {
         let winner = teamsArr.find(
-          (element) => element.abbreviation === awayTeam
+          (element) =>
+            element.abbreviation === awayTeam ||
+            element.name === awayTeam ||
+            element.city === awayTeam
         );
         winner.points += 2;
       }
@@ -85,14 +103,20 @@ function GameForm({ addGame }) {
       // Goals Stats
 
       let homeGoalStat = teamsArr.find(
-        (element) => element.abbreviation === homeTeam
+        (element) =>
+          element.abbreviation === homeTeam ||
+          element.name === homeTeam ||
+          element.city === homeTeam
       );
       homeGoalStat.goals_for += homeGoals;
       homeGoalStat.goals_against += awayGoals;
       homeGoalStat.game_counter += 1;
 
       let awayGoalStat = teamsArr.find(
-        (element) => element.abbreviation === awayTeam
+        (element) =>
+          element.abbreviation === awayTeam ||
+          element.name === awayTeam ||
+          element.city === awayTeam
       );
       awayGoalStat.goals_for += awayGoals;
       awayGoalStat.goals_against += homeGoals;

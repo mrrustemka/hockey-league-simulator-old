@@ -4,10 +4,16 @@ import "../App.css";
 
 function GameR({ game }) {
   let homeTeamInfo = teamsArr.find(
-    (element) => element.abbreviation === game.homeTeam
+    (element) =>
+      element.abbreviation === game.homeTeam ||
+      element.name === game.homeTeam ||
+      element.city === game.homeTeam
   );
   let awayTeamInfo = teamsArr.find(
-    (element) => element.abbreviation === game.awayTeam
+    (element) =>
+      element.abbreviation === game.awayTeam ||
+      element.name === game.awayTeam ||
+      element.city === game.awayTeam
   );
   return (
     <div className="col">
