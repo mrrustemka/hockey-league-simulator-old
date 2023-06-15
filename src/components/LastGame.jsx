@@ -17,27 +17,28 @@ function GameR({ game }) {
   );
   return (
     <div className="col">
-      <div className="card border-dark mb-1">
-        <div className="card-body row row-cols-3">
+      <div className="card border-light-subtle mb-1">
+        <div className="card-body row row-cols-3 m-0 p-0">
           <img
+            id="home-team-logo"
             src={homeTeamInfo.logo}
             className={`${homeTeamInfo.background_color} card-img-top g-col-3`}
             alt={homeTeamInfo.name}
           ></img>
           <div className="text-center">
-            <h6>
-              {game.homeTeam} {game.homeGoals}
-            </h6>
+            <h6>{homeTeamInfo.abbreviation}</h6>
           </div>
           <div className="text-center">
-            <h5>{game.typeOfOt}</h5>
+            <h4>{game.typeOfOt}</h4>
           </div>
           <div className="text-center">
-            <h6>
-              {game.awayTeam} {game.awayGoals}
-            </h6>
+            <h6>{awayTeamInfo.abbreviation}</h6>
           </div>
+          <div className="text-center">{game.homeGoals}</div>
+          <div></div>
+          <div className="text-center">{game.awayGoals}</div>
           <img
+            id="away-team-logo"
             src={awayTeamInfo.logo}
             className={`${awayTeamInfo.background_color} card-img-top g-col-3`}
             alt={awayTeamInfo.name}

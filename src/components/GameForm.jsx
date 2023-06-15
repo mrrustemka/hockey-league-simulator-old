@@ -48,7 +48,7 @@ function GameForm({ addGame }) {
         }
       }
 
-      // OT or Shootout
+      // OT or S/O
 
       if (homeGoals === awayGoals) {
         let otGoal = Math.random();
@@ -76,7 +76,7 @@ function GameForm({ addGame }) {
         if (ran > 0.5) {
           typeOfOt = " OT";
         } else {
-          typeOfOt = " Shootout";
+          typeOfOt = " S/O";
         }
       }
 
