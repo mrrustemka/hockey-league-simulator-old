@@ -6,9 +6,12 @@ import "../App.css";
 function GameForm({ addGame }) {
   const [homeTeam, setHomeTeam] = useState("");
   const [awayTeam, setAwayTeam] = useState("");
+  // const [homeTeamDirty, setHomeTeamDirty] = useState(false);
+  // const [homeTeamErroe, setHomeTeamError] = useState("Incorrect Team Name");
 
   const onSubmitHandler = (event) => {
     event.preventDefault();
+
     let homeGoals = 0;
     let awayGoals = 0;
     let typeOfOt = "";

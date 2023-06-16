@@ -25,18 +25,18 @@ function GameR({ game }) {
             className={`${homeTeamInfo.background_color} card-img-top g-col-3`}
             alt={homeTeamInfo.name}
           ></img>
-          <div className="text-center">
+          <div className="text-center pt-1">
             <h6>{homeTeamInfo.abbreviation}</h6>
           </div>
-          <div className="text-center">
+          <div className="text-center pt-1">
             <h4>{game.typeOfOt}</h4>
           </div>
-          <div className="text-center">
+          <div className="text-center pt-1">
             <h6>{awayTeamInfo.abbreviation}</h6>
           </div>
-          <div className="text-center">{game.homeGoals}</div>
+          <div className="text-center pb-1">{game.homeGoals}</div>
           <div></div>
-          <div className="text-center">{game.awayGoals}</div>
+          <div className="text-center pb-1">{game.awayGoals}</div>
           <img
             id="away-team-logo"
             src={awayTeamInfo.logo}
