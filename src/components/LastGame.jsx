@@ -16,27 +16,30 @@ function GameR({ game }) {
       element.city === game.awayTeam
   );
   return (
-    <div className="col">
+    <div className="">
       <div className="card border-light-subtle mb-1">
-        <div className="card-body row row-cols-3 m-0 p-0">
+        <div id="last-game">
           <img
             id="home-team-logo"
             src={homeTeamInfo.logo}
-            className={`${homeTeamInfo.background_color} card-img-top g-col-3`}
+            className={`${homeTeamInfo.background_color} card-img-top`}
             alt={homeTeamInfo.name}
           ></img>
-          <div className="text-center pt-1">
+          <div className="text-center pt-1" id="home-team">
             <h6>{homeTeamInfo.abbreviation}</h6>
           </div>
-          <div className="text-center pt-1">
+          <div className="text-center pt-1 m-auto" id="ot">
             <h4>{game.typeOfOt}</h4>
           </div>
-          <div className="text-center pt-1">
+          <div className="text-center pt-1" id="away-team">
             <h6>{awayTeamInfo.abbreviation}</h6>
           </div>
-          <div className="text-center pb-1">{game.homeGoals}</div>
-          <div></div>
-          <div className="text-center pb-1">{game.awayGoals}</div>
+          <div className="text-center pb-1" id="home-goals">
+            {game.homeGoals}
+          </div>
+          <div className="text-center pb-1" id="away-goals">
+            {game.awayGoals}
+          </div>
           <img
             id="away-team-logo"
             src={awayTeamInfo.logo}
