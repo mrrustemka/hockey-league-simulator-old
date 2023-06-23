@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <Game />
-      <Calendar />
+      {/* <Calendar /> */}
     </div>
   );
 }

@@ -4,8 +4,8 @@ import GameR from "./LastGame";
 function GameList({ games }) {
   if (!games.length) {
     return (
-      <div>
-        <h2>The list is empty</h2>
+      <div className="text-center p-2">
+        <h2>Game list is empty</h2>
       </div>
     );
   }

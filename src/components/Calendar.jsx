@@ -44,10 +44,9 @@ const Calendar = () => {
   teams.map((team) => {
     team.games.push(list);
   });
-
   console.log(teams);
 
-  return <div></div>;
+  return <div>{teams[0].games}</div>;
 };
 
 export default Calendar;

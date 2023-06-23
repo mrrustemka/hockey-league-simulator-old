@@ -1,8 +1,8 @@
-// import { ITeam } from "../components/info";
 import aik from "../images/aik.png";
-import fro from "../images/fro.png";
+// import fro from "../images/fro.png";
 import lak from "../images/lak.png";
 import ore from "../images/ore.png";
+import gen from "../images/gen.png";
 
 export const teams = [
   {
@@ -53,21 +53,37 @@ export const teams = [
     logo: ore,
     background_color: "ore",
   },
+  // {
+  //   id: 4,
+  //   name: "Frolunda HC",
+  //   abbreviation: "FRO",
+  //   country: "Swe",
+  //   city: "Frolunda",
+  //   points: 0,
+  //   goals_for: 0,
+  //   goals_against: 0,
+  //   rating: 0.99,
+  //   stadiumCapacity: 12044,
+  //   games: [],
+  //   game_counter: 0,
+  //   logo: fro,
+  //   background_color: "fro",
+  // },
   {
-    id: 4,
-    name: "Frolunda HC",
-    abbreviation: "FRO",
-    country: "Swe",
-    city: "Frolunda",
+    id: 5,
+    name: "Geneve Servette HC",
+    abbreviation: "GEN",
+    country: "Swi",
+    city: "Geneva",
     points: 0,
     goals_for: 0,
     goals_against: 0,
     rating: 0.99,
-    stadiumCapacity: 12044,
+    stadiumCapacity: 7135,
     games: [],
     game_counter: 0,
-    logo: fro,
-    background_color: "fro",
+    logo: gen,
+    background_color: "gen",
   },
 ];
 export default teams;
