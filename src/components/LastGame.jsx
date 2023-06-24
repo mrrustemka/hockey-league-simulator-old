@@ -1,8 +1,8 @@
 import React from "react";
-import teamsArr from "../data/teams";
+import teamsArr from "../data/teamsInfo";
 import "../App.css";
 
-function GameR({ game }) {
+function LastGame({ game }) {
   let homeTeamInfo = teamsArr.find(
     (element) =>
       element.abbreviation === game.homeTeam ||
@@ -52,4 +52,4 @@ function GameR({ game }) {
   );
 }
 
-export default GameR;
+export default LastGame;

@@ -3,6 +3,7 @@ import GameForm from "./GameForm";
 import React from "react";
 import GameList from "./GameList";
 import { v4 as uuidv4 } from "uuid";
+import Calendar from "./Calendar";
 
 function Ehl() {
   const [games, setGames] = useState([]);
@@ -29,6 +30,7 @@ function Ehl() {
     <div className="mt-4">
       <GameForm addGame={addGameHandler} />
       <GameList games={games} />
+      <Calendar games={games} />
     </div>
   );
 }

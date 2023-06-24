@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import teams from "../data/teams";
+import teams from "../data/teamsInfo";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function Sheet() {
@@ -21,7 +21,6 @@ function Sheet() {
       </div>
     );
   });
-  // setData(newState);
 
   useEffect(() => {
     setData(newState);

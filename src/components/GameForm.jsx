@@ -1,22 +1,11 @@
 import { useState } from "react";
-import teamsArr from "../data/teams";
+import teamsArr from "../data/teamsInfo";
 import Sheet from "./Sheet";
 import "../App.css";
 
 function GameForm({ addGame }) {
   const [homeTeam, setHomeTeam] = useState("");
   const [awayTeam, setAwayTeam] = useState("");
-  // const [homeTeamDirty, setHomeTeamDirty] = useState(false);
-  // let [homeTeamError, setHomeTeamError] = useState("incorrect value");
-  // homeTeamError = "ms-2 me-2 ";
-
-  // const blurHandler = (e) => {
-  //   switch (e.target.name) {
-  //     case "homeTeam":
-  //       setHomeTeamDirty(true);
-  //       break;
-  //   }
-  // };
 
   const onSubmitHandler = (event) => {
     event.preventDefault();
@@ -152,9 +141,7 @@ function GameForm({ addGame }) {
             value={homeTeam}
             onChange={(e) => setHomeTeam(e.target.value)}
             className="ms-2 me-2"
-            // onBlur={(e) => blurHandler(e)}
           />
-          {/* {homeTeamDirty && homeTeamError && <div>{homeTeamError}</div>} */}
         </div>
         <div className="m-2">
           Away Team:

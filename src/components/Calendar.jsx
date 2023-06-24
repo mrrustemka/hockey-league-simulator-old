@@ -1,52 +1,30 @@
+import { useState } from "react";
 import React from "react";
-// import { useState, useEffect } from "react";
+import teamsInfo from "../data/teamsInfo";
 import teams from "../data/teams";
+import gamesList from "../data/gamesList";
 
-// function Calendar() {
-//   const [data, setData] = useState(teams);
-//   let teamsList = "";
-//   let newState = teams.map((team) => {
-//     teamsList += team.abbreviation + ", ";
-//   });
-
-//   addGames(teamsList);
-
-//   function addGames(name) {
-//     let team = teams.find((element) => element.abbreviation === name);
-//     team.games.push(teamsList);
-//   }
-
-//   addGames(teamsList);
-
-//   function addGames(teamsList) {
-//     teams.map((team) => {
-//       team.games += teamsList;
-//     });
-//   }
-
-//   useEffect(() => {
-//     setData(newState);
-//   }, []);
-
-//   console.log(teams);
-
-//   return <div>{teamsList}</div>;
-// }
-
-const Calendar = () => {
+const Calendar = ({ games }) => {
   let teamsList = "";
-  teams.map((team) => {
-    teamsList += team.abbreviation + " ";
+  teamsInfo.map((teamInfo) => {
+    teamsList += teamInfo.abbreviation + " ";
   });
 
   let list = teamsList.split(" ", teamsList.split(" ").length - 1);
 
-  teams.map((team) => {
-    team.games.push(list);
-  });
+  const [teams] = useState(list);
+  let [gamesList, setGamesList] = useState();
+
   console.log(teams);
 
-  return <div>{teams[0].games}</div>;
+  function add(gamesList) {
+    teams.map((team) => {
+      setGamesList(teamsInfo.abbreviation + "-" + team);
+    });
+  }
+  console.log(gamesList)
+
+  return <div></div>;
 };
 
 export default Calendar;
