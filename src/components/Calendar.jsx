@@ -11,18 +11,42 @@ const Calendar = ({ games }) => {
   });
 
   let list = teamsList.split(" ", teamsList.split(" ").length - 1);
-
   const [teams] = useState(list);
-  let [gamesList, setGamesList] = useState();
 
-  console.log(teams);
-
-  function add(gamesList) {
+  let schedule = [];
+  teamsInfo.map((teamInfo) => {
     teams.map((team) => {
-      setGamesList(teamsInfo.abbreviation + "-" + team);
+      if (teamInfo.abbreviation === team) {
+        return;
+      } else {
+        schedule.push(teamInfo.abbreviation + " - " + team);
+      }
+    });
+  });
+
+  const [gamesList] = useState(schedule);
+
+  console.log(gamesList);
+  console.log(games);
+  deleteGames(games);
+
+  function deleteGames(games) {
+    games.map((game) => {
+      let a = gamesList.find(
+        (element) =>
+          game.homeTeam + " - " + game.awayTeam === element ||
+          game.awayTeam + " - " + game.homeTeam
+      );
+      // console.log(game.homeTeam + " - " + game.awayTeam);
+      const newArr = gamesList.filter((el) => el !== a);
+      console.log(newArr);
     });
   }
-  console.log(gamesList)
+
+  // gamesList.find(
+  //   (element) =>
+  //     element === game + ' - ' +
+  // )?.rating;
 
   return <div></div>;
 };
