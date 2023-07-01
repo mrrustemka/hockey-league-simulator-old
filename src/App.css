@@ -87,3 +87,8 @@
   grid-row-start: 4;
   grid-row-end: 5;
 }
+
+#games {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}

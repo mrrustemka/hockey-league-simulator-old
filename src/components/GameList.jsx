@@ -1,20 +1,21 @@
 import React from "react";
 import LastGame from "./LastGame";
+import teamsInfo from "../data/teamsInfo";
 
 function GameList({ games }) {
-  if (!games.length) {
-    return (
-      <div className="text-center p-2">
-        <h2>Game list is empty</h2>
-      </div>
-    );
-  }
+  console.log("games", games);
+
   return (
-    <div className="row row-cols-3 row-cols-md-6 g-4 m-2">
-      {games.map((game) => (
-        <LastGame game={game} key={game.id} />
-      ))}
-      {games.newGame}
+    <div id="games">
+      {games.map((game) => {
+        let homeTeam = teamsInfo.find(
+          (element) => element.abbreviation === game.home
+        );
+        let awayTeam = teamsInfo.find(
+          (element) => element.abbreviation === game.away
+        );
+        return <LastGame home={homeTeam} away={awayTeam} />;
+      })}
     </div>
   );
 }

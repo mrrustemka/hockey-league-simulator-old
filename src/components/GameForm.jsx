@@ -127,11 +127,12 @@ function GameForm({ addGame }) {
     setHomeTeam("");
     setAwayTeam("");
   };
+  // };
 
   return (
     <div className="text-center mt-4">
       <Sheet />
-      <form onSubmit={onSubmitHandler}>
+      {/* <form onSubmit={onSubmitHandler}>
         <div className="m-2">
           Home Team:
           <input
@@ -157,7 +158,7 @@ function GameForm({ addGame }) {
         <button type="submit" title="Submit" className="btn btn-dark mt-4">
           Simulate
         </button>
-      </form>
+      </form> */}
     </div>
   );
 }
