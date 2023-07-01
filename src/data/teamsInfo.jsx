@@ -2,6 +2,7 @@ import can from "../images/can.jpg";
 import usa from "../images/usa.jpg";
 import swe from "../images/swe.jpg";
 import fin from "../images/fin.jpg";
+import cze from "../images/cze.jpg";
 
 export const teamsInfo = [
   {
@@ -62,6 +63,21 @@ export const teamsInfo = [
     stadiumCapacity: 12044,
     game_counter: 0,
     logo: fin,
+    background_color: "",
+  },
+  {
+    id: 5,
+    name: "Czech Republic",
+    abbreviation: "CZE",
+    country: "Cze",
+    city: "Prague",
+    points: 0,
+    goals_for: 0,
+    goals_against: 0,
+    rating: 0.66,
+    stadiumCapacity: 12044,
+    game_counter: 0,
+    logo: cze,
     background_color: "",
   },
 ];
