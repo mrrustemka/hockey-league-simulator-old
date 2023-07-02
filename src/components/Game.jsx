@@ -101,7 +101,7 @@ function LastGame({ home, away }) {
 
   return (
     <div>
-      <div>
+      <div className="text-center">
         <div className="row g-4 m-2">
           <div className="">
             <div className="card border-light-subtle mb-1 ">
@@ -137,7 +137,9 @@ function LastGame({ home, away }) {
             </div>
           </div>
         </div>
-        <button onClick={Simulate}>Simulate</button>
+        <button onClick={Simulate} type="button" className="btn btn-dark">
+          Simulate
+        </button>
       </div>
     </div>
   );
