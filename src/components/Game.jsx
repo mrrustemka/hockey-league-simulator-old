@@ -3,7 +3,7 @@ import teamsInfo from "../data/teamsInfo";
 import Sheet from "./Sheet";
 import "../App.css";
 
-function LastGame({ home, away }) {
+function Game({ home, away }) {
   let [homeGoals, setHomeGoals] = useState(0);
   let [awayGoals, setAwayGoals] = useState(0);
   let [typeOfOt, setTypeOfOt] = useState("");
@@ -18,7 +18,9 @@ function LastGame({ home, away }) {
     //Goals
 
     setHomeGoals((homeGoals = Math.round(getRandomInt(0, 9) * homeRate)));
+    console.log("home goals", homeGoals);
     setAwayGoals((awayGoals = Math.round(getRandomInt(0, 9) * awayRate)));
+    console.log("away goals", awayGoals);
     function getRandomInt(min, max) {
       return Math.floor(Math.random() * (max - min + 1)) + min;
     }
@@ -27,7 +29,9 @@ function LastGame({ home, away }) {
       if (ran > 0.5) {
         return;
       } else {
-        homeGoals = awayGoals;
+        let x = homeGoals;
+        setAwayGoals(x);
+        console.log("away goals & home goals", homeGoals, awayGoals);
       }
     }
 
@@ -37,12 +41,14 @@ function LastGame({ home, away }) {
       let otGoal = Math.random();
       if (otGoal > 0.5) {
         setHomeGoals((homeGoals += 1));
+        console.log("home goals", homeGoals);
         let winner = teamsInfo.find(
           (element) => element.abbreviation === away.abbreviation
         );
         winner.points += 1;
       } else {
         setAwayGoals((awayGoals += 1));
+        console.log("away goals", awayGoals);
         let winner = teamsInfo.find(
           (element) => element.abbreviation === home.abbreviation
         );
@@ -97,6 +103,8 @@ function LastGame({ home, away }) {
       awayGoals,
       typeOfOt
     );
+    setHomeGoals(homeGoals);
+    setAwayGoals(awayGoals);
   }
 
   return (
@@ -145,4 +153,4 @@ function LastGame({ home, away }) {
   );
 }
 
-export default LastGame;
+export default Game;
