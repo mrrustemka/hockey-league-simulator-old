@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import teams from "../data/teamsInfo";
-import Calendar from "./Calendar";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function Sheet() {
@@ -53,7 +52,6 @@ function Sheet() {
           );
         })}
       </table>
-      <Calendar />
     </div>
   );
 }

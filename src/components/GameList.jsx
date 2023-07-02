@@ -1,10 +1,8 @@
 import React from "react";
-import LastGame from "./LastGame";
+import LastGame from "./Game";
 import teamsInfo from "../data/teamsInfo";
 
 function GameList({ games }) {
-  console.log("games", games);
-
   return (
     <div id="games">
       {games.map((game) => {
