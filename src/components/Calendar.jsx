@@ -1,8 +1,6 @@
 import React from "react";
 import GameList from "./GameList";
 import teamsInfo from "../data/teamsInfo";
-// import teams from "../data/teams";
-import gamesList from "../data/gamesList";
 import { v4 as uuidv4 } from "uuid";
 
 let teamsList = "";
