@@ -1,17 +1,21 @@
 {
   "files": {
-    "main.css": "/hockey-league-simulator/static/css/main.4308ad54.css",
-    "main.js": "/hockey-league-simulator/static/js/main.b3d27e87.js",
-    "static/media/lak.png": "/hockey-league-simulator/static/media/lak.26d09b402825b005561f.png",
-    "static/media/gen.png": "/hockey-league-simulator/static/media/gen.60f7da7e41e921275c85.png",
-    "static/media/ore.png": "/hockey-league-simulator/static/media/ore.630c192d0898207dc73a.png",
-    "static/media/aik.png": "/hockey-league-simulator/static/media/aik.0ac4d54a355dce6616e2.png",
+    "main.css": "/hockey-league-simulator/static/css/main.cc0bf244.css",
+    "main.js": "/hockey-league-simulator/static/js/main.3befc7b7.js",
+    "static/media/usa.jpg": "/hockey-league-simulator/static/media/usa.970731614dcc483a7b7a.jpg",
+    "static/media/slo.jpg": "/hockey-league-simulator/static/media/slo.fc88f1e51653b4b29139.jpg",
+    "static/media/can.jpg": "/hockey-league-simulator/static/media/can.e16d14a7d1bf090c913e.jpg",
+    "static/media/swe.jpg": "/hockey-league-simulator/static/media/swe.98b876e2ee0d14966873.jpg",
+    "static/media/swi.jpg": "/hockey-league-simulator/static/media/swi.4937d621d4a5e7b01429.jpg",
+    "static/media/ger.jpg": "/hockey-league-simulator/static/media/ger.db937a915a3db6195b9a.jpg",
+    "static/media/cze.jpg": "/hockey-league-simulator/static/media/cze.edc794cd30675ae0f5e7.jpg",
+    "static/media/fin.jpg": "/hockey-league-simulator/static/media/fin.a1c5d663b479e3ce7a88.jpg",
     "index.html": "/hockey-league-simulator/index.html",
-    "main.4308ad54.css.map": "/hockey-league-simulator/static/css/main.4308ad54.css.map",
-    "main.b3d27e87.js.map": "/hockey-league-simulator/static/js/main.b3d27e87.js.map"
+    "main.cc0bf244.css.map": "/hockey-league-simulator/static/css/main.cc0bf244.css.map",
+    "main.3befc7b7.js.map": "/hockey-league-simulator/static/js/main.3befc7b7.js.map"
   },
   "entrypoints": [
-    "static/css/main.4308ad54.css",
-    "static/js/main.b3d27e87.js"
+    "static/css/main.cc0bf244.css",
+    "static/js/main.3befc7b7.js"
   ]
 }
