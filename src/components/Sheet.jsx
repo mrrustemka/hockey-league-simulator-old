@@ -4,11 +4,14 @@ import "bootstrap/dist/css/bootstrap.min.css";
 function Sheet({ teams }) {
   if (teams[0] !== undefined) {
     let sortTeams = teams;
+    let i = 0;
+
     sortTeams[0].sort((a, b) => b.points - a.points);
     return (
-      <div className=" text-center">
+      <div className="text-center">
         <table className="table table-hover table-bordered">
           <thead className="">
+            <th scope="col">#</th>
             <th scope="col">Team</th>
             <th scope="col">City</th>
             <th scope="col">Games</th>
@@ -17,9 +20,11 @@ function Sheet({ teams }) {
             <th scope="col">GA</th>
           </thead>
           {sortTeams[0].map((team) => {
+            i++;
             return (
               <tbody key={team.id}>
                 <tr>
+                  <th>{i}</th>
                   <th>{team.name}</th>
                   <th>{team.city}</th>
                   <th>{team.game_counter}</th>
