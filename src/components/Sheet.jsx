@@ -8,12 +8,12 @@ function Sheet({ teams }) {
 
     sortTeams[0].sort((a, b) => b.points - a.points);
     return (
-      <div className="text-center">
+      <div className="text-center fixed-top">
         <table className="table table-hover table-bordered">
-          <thead className="">
+          <thead className="bg-body-secondary">
             <th scope="col">#</th>
             <th scope="col">Team</th>
-            <th scope="col">City</th>
+            <th scope="col">Team Rating</th>
             <th scope="col">Games</th>
             <th scope="col">Points</th>
             <th scope="col">GF</th>
@@ -26,7 +26,7 @@ function Sheet({ teams }) {
                 <tr>
                   <th>{i}</th>
                   <th>{team.name}</th>
-                  <th>{team.city}</th>
+                  <th>{team.rating * 100}</th>
                   <th>{team.game_counter}</th>
                   <th className="">{team.points}</th>
                   <th className="">{team.goals_for}</th>

@@ -104,7 +104,7 @@ function Game({ home, away, sheetData }) {
 
   return (
     <div className="mt-5 pt-5">
-      <div className="text-center">
+      <div className="text-center mt-5 pt-5">
         <div className="row g-4 m-2">
           <div className="">
             <div className="card border-light-subtle mb-1 ">

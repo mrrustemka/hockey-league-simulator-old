@@ -41,8 +41,6 @@ teamsInfo.map((teamInfo) => {
   return teamInfo;
 });
 
-// console.log(schedule);
-
 function Calendar() {
   return (
     <div>
