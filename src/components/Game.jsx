@@ -23,7 +23,7 @@ function Game({ home, away, sheetData }) {
     }
     if (homeGoals - awayGoals >= 5 || awayGoals - homeGoals >= 5) {
       let ran = Math.random();
-      if (ran > 0.5) {
+      if (ran > 0.75) {
         return;
       } else {
         let goals = homeGoals;
@@ -103,7 +103,7 @@ function Game({ home, away, sheetData }) {
   }
 
   return (
-    <div>
+    <div className="mt-5 pt-5">
       <div className="text-center">
         <div className="row g-4 m-2">
           <div className="">
@@ -112,7 +112,7 @@ function Game({ home, away, sheetData }) {
                 <img
                   id="home-team-logo"
                   src={home.logo}
-                  className={`${home.background_color} card-img-top`}
+                  className={`${home.background_color} card-img-top border-bottom border-light-subtle`}
                   alt={home.name}
                 ></img>
                 <div className="text-center pt-1" id="home-team">
@@ -133,7 +133,7 @@ function Game({ home, away, sheetData }) {
                 <img
                   id="away-team-logo"
                   src={away.logo}
-                  className={`${away.background_color} card-img-top g-col-3`}
+                  className={`${away.background_color} card-img-top g-col-3 border-top border-light-subtle`}
                   alt={away.name}
                 ></img>
               </div>

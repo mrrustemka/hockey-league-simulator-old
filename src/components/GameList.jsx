@@ -5,13 +5,20 @@ import teamsInfo from "../data/teamsInfo";
 
 function GameList({ games }) {
   let [teams, setTeams] = useState([]);
-  console.log("teams before", teams);
+
+  let random = Math.random();
+  // if (random > 0.5) {
+  //   let box;
+  //   box = home;
+  //   home = away;
+  //   away = box;
+  // }
+
+  // console.log(games);
 
   function sheetData(newTeams) {
     setTeams([newTeams]);
-    console.log("sheetData entered", newTeams);
   }
-  console.log("teams after", teams);
 
   return (
     <div>

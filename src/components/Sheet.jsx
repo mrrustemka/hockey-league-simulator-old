@@ -1,8 +1,10 @@
-import { useState } from "react";
+import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function Sheet({ teams }) {
-  if (teams[0] != undefined) {
+  if (teams[0] !== undefined) {
+    let sortTeams = teams;
+    sortTeams[0].sort((a, b) => b.points - a.points);
     return (
       <div className=" text-center">
         <table className="table table-hover table-bordered">
@@ -14,7 +16,7 @@ function Sheet({ teams }) {
             <th scope="col">GF</th>
             <th scope="col">GA</th>
           </thead>
-          {teams[0].map((team) => {
+          {sortTeams[0].map((team) => {
             return (
               <tbody key={team.id}>
                 <tr>
