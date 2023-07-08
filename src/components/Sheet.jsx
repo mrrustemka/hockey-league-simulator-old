@@ -8,7 +8,7 @@ function Sheet({ teams }) {
 
     sortTeams[0].sort((a, b) => b.points - a.points);
     return (
-      <div className="text-center fixed-top">
+      <div className="text-center fixed-top" id="sheet">
         <table className="table table-hover table-bordered">
           <thead className="bg-body-secondary">
             <th scope="col">#</th>
