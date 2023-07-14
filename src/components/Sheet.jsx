@@ -1,10 +1,29 @@
 import React from "react";
+import PlayOff from "./PlayOff";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function Sheet({ teams }) {
   if (teams[0] !== undefined) {
     let sortTeams = teams;
     let i = 0;
+    let playOff = false;
+    let style;
+
+    {
+      teams[0].map((team) => {
+        // if (team.game_counter === teams[0].length - 1) {
+        if (team.game_counter === 1) {
+          playOff = true;
+        } else {
+          playOff = false;
+        }
+        console.log("po", playOff);
+        return playOff;
+      });
+      playOff === true
+        ? (style = "btn btn-dark d-block")
+        : (style = "btn btn-dark d-none");
+    }
 
     sortTeams[0].sort((a, b) => b.points - a.points);
     return (
@@ -36,6 +55,7 @@ function Sheet({ teams }) {
             );
           })}
         </table>
+        <PlayOff className={style} teams={teams[0]} />
       </div>
     );
   }

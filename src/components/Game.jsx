@@ -23,7 +23,7 @@ function Game({ home, away, sheetData }) {
     }
     if (homeGoals - awayGoals >= 5 || awayGoals - homeGoals >= 5) {
       let ran = Math.random();
-      if (ran > 0.75) {
+      if (ran > 0.9) {
         return;
       } else {
         let goals = homeGoals;

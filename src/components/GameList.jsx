@@ -6,18 +6,6 @@ import teamsInfo from "../data/teamsInfo";
 function GameList({ games }) {
   let [teams, setTeams] = useState([]);
 
-  // let random = Math.random();
-  // if (random > 0.5) {
-  //   let box;
-  //   box = home;
-  //   home = away;
-  //   away = box;
-  // }
-
-  // console.log(games);
-
-  console.log(teamsInfo);
-
   function sheetData(newTeams) {
     setTeams([newTeams]);
   }
@@ -30,10 +18,10 @@ function GameList({ games }) {
       <div className={styles}>
         <h2 className="text-center">
           Simulator of Hockey League. You can simulate games. For launch click
-          'Simulate' button on any game. You can to select your national team or any other:
+          'Simulate' button on any game. You can to select your national team or
+          any other:
         </h2>
         <div className="text-center">
-          {" "}
           {teamsInfo.map((team) => {
             return (
               <div>
