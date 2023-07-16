@@ -2,16 +2,32 @@ import React, { useState } from "react";
 import Game from "./Game";
 import Sheet from "./Sheet";
 import teamsInfo from "../data/teamsInfo";
+// import PlayOff from "./PlayOff";
+import PlayOffGame from "./PlayOff";
 
 function GameList({ games }) {
   let [teams, setTeams] = useState([]);
+  let playOff = false;
+  // let style = "d-none";
+  // let hTeam, aTeam;
 
   function sheetData(newTeams) {
     setTeams([newTeams]);
+    // playOff = newTeams.every((team) => team.game_counter === 1);
+    // if (playOff === true) {
+    //   // style = "d-block";
+    //   // console.log("play off teams", newTeams[0].name);
+
+    //   hTeam = newTeams[0];
+    //   aTeam = newTeams[7];
+    // }
   }
 
   let styles;
   teams[0] !== undefined ? (styles = "d-none") : (styles = "d-block mt-5 pt-5");
+
+  // let style = "d-block";
+  // teams[0] !== undefined ? (style = "d-none") : (styles = "d-block mt-5 pt-5");
 
   return (
     <div>
@@ -51,6 +67,9 @@ function GameList({ games }) {
             />
           );
         })}
+      </div>
+      <div>
+        <PlayOffGame teams={teams} />
       </div>
     </div>
   );
