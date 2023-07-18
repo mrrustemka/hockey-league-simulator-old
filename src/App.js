@@ -1,10 +1,9 @@
-// import Calendar from "./components/Calendar";
-import GameList from "./components/League";
+import League from "./components/League";
 
 function App() {
   return (
     <div className="App mb-4">
-      <GameList />
+      <League />
     </div>
   );
 }
