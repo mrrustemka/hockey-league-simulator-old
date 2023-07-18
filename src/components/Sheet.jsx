@@ -5,7 +5,7 @@ function Sheet({ teams }) {
   teams = teams[0];
   let [playOff, setPlayOff] = useState(false);
 
-  const changePlayOff = (playOff) => {
+  const changePlayOff = () => {
     setPlayOff(true);
   };
 
@@ -16,8 +16,8 @@ function Sheet({ teams }) {
 
     playOffButton = "btn btn-dark d-none";
 
-    teams.every((team) => team.game_counter === teams.length -1)
-      ? (playOffButton = "btn btn-dark d-block")
+    teams.every((team) => team.game_counter === 1)
+      ? (playOffButton = "btn btn-dark d-block m-2 ms-5")
       : (playOffButton = "btn btn-dark d-none");
 
     if (playOff === true) {
@@ -138,6 +138,14 @@ function Sheet({ teams }) {
       sortTeams.sort((a, b) => b.points - a.points);
       return (
         <div className="text-center fixed-top" id="sheet">
+          <button
+            type="button"
+            className={playOffButton}
+            onClick={changePlayOff}
+          >
+            Start Play Off!
+          </button>
+
           <table className="table table-hover table-bordered">
             <thead className="bg-body-secondary">
               <th scope="col">#</th>
@@ -165,13 +173,6 @@ function Sheet({ teams }) {
               );
             })}
           </table>
-          <button
-            type="button"
-            className={playOffButton}
-            onClick={changePlayOff}
-          >
-            Start Play Off!
-          </button>
         </div>
       );
     }
