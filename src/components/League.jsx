@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Game from "./Game";
 import Sheet from "./Sheet";
 import teamsInfo from "../data/teamsInfo";
-// import PlayOffGame from "./PlayOff";
 import { v4 as uuidv4 } from "uuid";
 
 let teamsList = "";
@@ -14,10 +13,7 @@ teamsInfo.map((teamInfo) => {
   return teamsList;
 });
 
-console.log("1", teamsList);
-
 teams = teamsList.split(" ", teamsList.split(" ").length - 1);
-console.log("2", teams);
 
 let i = 0;
 teamsInfo.map((teamInfo) => {
@@ -100,9 +96,6 @@ function GameList() {
           );
         })}
       </div>
-      {/* <div>
-        <PlayOffGame teams={teams} />
-      </div> */}
     </div>
   );
 }

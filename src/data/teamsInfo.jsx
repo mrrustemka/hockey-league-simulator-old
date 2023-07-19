@@ -22,6 +22,9 @@ export const teamsInfo = [
     game_counter: 0,
     logo: can,
     background_color: "",
+    round_1: false,
+    round_2: false,
+    round_3: false,
   },
   {
     id: 2,
@@ -37,6 +40,9 @@ export const teamsInfo = [
     game_counter: 0,
     logo: usa,
     background_color: "",
+    round_1: false,
+    round_2: false,
+    round_3: false,
   },
   {
     id: 3,
@@ -52,6 +58,9 @@ export const teamsInfo = [
     game_counter: 0,
     logo: swe,
     background_color: "",
+    round_1: false,
+    round_2: false,
+    round_3: false,
   },
   {
     id: 4,
@@ -67,6 +76,9 @@ export const teamsInfo = [
     game_counter: 0,
     logo: fin,
     background_color: "",
+    round_1: false,
+    round_2: false,
+    round_3: false,
   },
   {
     id: 5,
@@ -82,6 +94,9 @@ export const teamsInfo = [
     game_counter: 0,
     logo: cze,
     background_color: "",
+    round_1: false,
+    round_2: false,
+    round_3: false,
   },
   {
     id: 6,
@@ -97,6 +112,9 @@ export const teamsInfo = [
     game_counter: 0,
     logo: ger,
     background_color: "",
+    round_1: false,
+    round_2: false,
+    round_3: false,
   },
   {
     id: 7,
@@ -107,11 +125,14 @@ export const teamsInfo = [
     points: 0,
     goals_for: 0,
     goals_against: 0,
-    rating: 0.70,
+    rating: 0.7,
     stadiumCapacity: 0,
     game_counter: 0,
     logo: slo,
     background_color: "",
+    round_1: false,
+    round_2: false,
+    round_3: false,
   },
   {
     id: 8,
@@ -127,6 +148,9 @@ export const teamsInfo = [
     game_counter: 0,
     logo: swi,
     background_color: "",
+    round_1: false,
+    round_2: false,
+    round_3: false,
   },
 ];
 export default teamsInfo;

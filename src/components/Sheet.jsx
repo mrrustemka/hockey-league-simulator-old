@@ -21,6 +21,11 @@ function Sheet({ teams }) {
       : (playOffButton = "btn btn-dark d-none");
 
     if (playOff === true) {
+      console.log(teams[0].round_1);
+      for (i = 0; i < 8; i++) {
+        teams[i].round_1 = true;
+        console.log(teams[i].round_1);
+      }
       return (
         <div className="text-center fixed-top">
           <h1>Play Off</h1>
