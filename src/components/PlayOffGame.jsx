@@ -1,7 +1,11 @@
 import React, { useState } from "react";
+import teamsInfo from "../data/teamsInfo";
 
 function PlayOffGame(home, away) {
-  //   console.log(hTeam, aTeam);
+  // home = home[home];
+  // away = away.away;
+  console.log("Play Off Game/ 1st team is", home);
+  console.log("Play Off Game/ 8th team is", away);
 
   let [homeGoals, setHomeGoals] = useState(0);
   let [awayGoals, setAwayGoals] = useState(0);
@@ -93,7 +97,7 @@ function PlayOffGame(home, away) {
     );
     setHomeGoals(homeGoals);
     setAwayGoals(awayGoals);
-    sheetData(teamsInfo);
+    // sheetData(teamsInfo);
   }
   return (
     <div className="mt-5 pt-5">
