@@ -13,7 +13,8 @@ function Sheet({ teams }) {
           <thead className="bg-body-secondary">
             <th scope="col">#</th>
             <th scope="col">Team</th>
-            <th scope="col">Country</th>
+            {/* <th scope="col">Country</th> */}
+            <th scope="col">Raiting</th>
             <th scope="col">City</th>
             <th scope="col">G</th>
             <th scope="col">P</th>
@@ -29,8 +30,11 @@ function Sheet({ teams }) {
                   <th className={`${team.sheet_background_color}`}>
                     {team.name}
                   </th>
-                  <th className={`${team.sheet_background_color}`}>
+                  {/* <th className={`${team.sheet_background_color}`}>
                     {team.country}
+                  </th> */}
+                  <th className={`${team.sheet_background_color}`}>
+                    {team.rating * 100}
                   </th>
                   <th className={`${team.sheet_background_color}`}>
                     {team.city}
