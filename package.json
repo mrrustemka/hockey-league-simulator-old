@@ -2,7 +2,7 @@
   "name": "hockey-league-simulator-js",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://mrrustemka.github.io/hockey-league-simulator/",
+  "homepage": "https://mrrustemka.github.io/hockey-league-simulator-old/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
